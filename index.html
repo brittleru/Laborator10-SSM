@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Laborator 10 SSM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container div-imgs">
+      <img class="img-left" src="./img/logo-poli.png" alt="">
+      <img class="img-right" src="./img/logo-facultate.png" alt="">
+    </div>
+  </div>
+
+  <div class="container text-container">
+    <br>
+    <h2 class="text-col">Laboratorul 10</h2>
+    <h2 class="text-col">Interfață grafică utilizator</h2>
+    <h2 class="text-col">GUIDE</h2>
+  </div>
+
+  <div class="container stuff">
+    <div class="row">
+      <div class="container col col-md-4">
+        <div class="panel-date">
+          <h4 class="text-col">Date de Intrare</h4>
+          <div class="left">
+            <div class="box">
+              <label for="phiM">Φ <span class="small_letter">M </span>[mm] = </label>
+              <input type="number" id="phiM" name="phiM" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="phiO">Φ <span class="small_letter">o </span>[mm] = </label>
+              <input type="number" id="phiO" name="phiO" autocomplete="on" placeholder="...">
+            </div>
+            <div class="box">
+              <label for="phi1">Φ <span class="small_letter">1 </span>[mm] = </label>
+              <input type="number" id="phi1" name="phi1" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="phi2">Φ <span class="small_letter">2 </span>[mm] = </label>
+              <input type="number" id="phi2" name="phi2" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="phi3">Φ <span class="small_letter">3 </span>[mm] = </label>
+              <input type="number" id="phi3" name="phi3" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="phi4">Φ <span class="small_letter">4 </span>[mm] = </label>
+              <input type="number" id="phi4" name="phi4" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="n">n <span class="small_letter">g </span>[ - ] = </label>
+              <input type="number" id="n" name="n" autocomplete="on" placeholder="...">
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="box">
+              <label for="lT">L <span class="small_letter">T </span>[mm] = </label>
+              <input type="number" id="lT" name="lT" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="l1">L <span class="small_letter">1 </span>[mm] = </label>
+              <input type="number" id="l1" name="l1" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="l2">L <span class="small_letter">2 </span>[mm] = </label>
+              <input type="number" id="l2" name="l2" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="l3">L <span class="small_letter">3 </span>[mm] = </label>
+              <input type="number" id="l3" name="l3" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="l4">L <span class="small_letter">4 </span>[mm] = </label>
+              <input type="number" id="l4" name="l4" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="rho1">ρ <span class="small_letter">1 </span>[kg/m<sup>3</sup>] = </label>
+              <input type="number" id="rho1" name="rho1" autocomplete="on" placeholder="...">
+            </div>
+
+            <div class="box">
+              <label for="rho2">ρ <span class="small_letter">2 </span>[kg/m<sup>3</sup>] = </label>
+              <input type="number" id="rho2" name="rho2" autocomplete="on" placeholder="...">
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <div class="container col col-md-4">
+        <div class="mecanism-centric">
+          <img id="img-figura" class="img-grafic" src="./img/ansamblu.jpeg" alt="Imagine Figura">
+        </div>
+      </div>
+
+      <div class="container col col-md-4">
+        <div class="row">
+          <div class="panel-rezultate">
+            <h4 class="text-col" style="text-align:center;">Rezultate</h4>
+            <br>
+            <h4 class="text-col" id="piesa_id">Ansamblu</h4>
+            <br>
+            <div class="">
+              <h3 class="text-col">Volum = <span id="volum_piesa">...</span> <span class="unitate-de-masura">[m<sup>3</sup>]</span> </h3>
+              <h3 class="text-col">Masa = <span id="masa_piesa">...</span> <span class="unitate-de-masura">[kg]</span></h3>
+              <h3 class="text-col">Moment = <span id="moment_piesa">...</span> <span class="unitate-de-masura">[kg&sdot;m<sup>2</sup>]</span></h3>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="toggle-button">
+            <label for="toggle-stuff" class="text-col">Selecteaza piesa:</label>
+            <select class="toggle-sty" name="toggle-stuff" id="toggle-id">
+              <option value="ansamblu">Ansamblu</option>
+              <option value="aliaj">Aliajul de Aluminiu</option>
+              <option value="arbore">Arbore de Otel</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <br>
+  <div class="container eu">
+    <div class="container text-eu">
+      <h5 class="text-col">Mocanu Sebastian 541B</h5>
+      <h5 class="text-col">Grupa: 541B_b</h5>
+      <h5 class="text-col">Data: 06.05.2021</h5>
+    </div>
+    <button id="button-calcul" class="centric" type="button" name="button">Calculeaza Volumul, Masa, Momentul de Inertie</button>
+    <button id="button-reset" class="centric" type="button" name="button">Reset</button>
+    <button id="button-exit" class="centric" type="button" name="button">Exit</button>
+  </div>
+
+  <!-- <script type="text/javascript">
+    window.onbeforeunload = function(e) {
+      e = e || window.event;
+      if (e) {
+        e.returnValue = 'Sure?';
+      }
+      return 'Sure?';
+    };
+  </script> -->
+
+  <!-- Reset -->
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
