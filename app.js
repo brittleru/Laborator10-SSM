@@ -1,38 +1,37 @@
 // Cache the DOM
 // Butoane functionalitate
-buttonCalcul = document.getElementById("button-calcul");
-buttonReset = document.getElementById("button-reset");
-buttonExit = document.getElementById("button-exit");
+const buttonCalcul = document.getElementById("button-calcul");
+const buttonReset = document.getElementById("button-reset");
+const buttonExit = document.getElementById("button-exit");
 // Date de intrare
-phiM = document.getElementById("phiM");
-phiO = document.getElementById("phiO");
-phi1 = document.getElementById("phi1");
-phi2 = document.getElementById("phi2");
-phi2 = document.getElementById("phi2");
-phi3 = document.getElementById("phi3");
-phi4 = document.getElementById("phi4");
-lM = document.getElementById("lM");
-l1 = document.getElementById("l1");
-l2 = document.getElementById("l2");
-l3 = document.getElementById("l3");
-l4 = document.getElementById("l4");
-rho1 = document.getElementById("rho1");
-rho2 = document.getElementById("rho2");
-n = document.getElementById("n");
+const phiM = document.getElementById("phiM");
+const phiO = document.getElementById("phiO");
+const phi1 = document.getElementById("phi1");
+const phi2 = document.getElementById("phi2");
+const phi3 = document.getElementById("phi3");
+const phi4 = document.getElementById("phi4");
+const lM = document.getElementById("lM");
+const l1 = document.getElementById("l1");
+const l2 = document.getElementById("l2");
+const l3 = document.getElementById("l3");
+const l4 = document.getElementById("l4");
+const rho1 = document.getElementById("rho1");
+const rho2 = document.getElementById("rho2");
+const n = document.getElementById("n");
 // Rezultate
-piesa_text = document.getElementById("piesa_id");
-volum_piesa = document.getElementById("volum_piesa");
-masa_piesa = document.getElementById("masa_piesa");
-moment_piesa = document.getElementById("moment_piesa");
+const piesa_text = document.getElementById("piesa_id");
+const volum_piesa = document.getElementById("volum_piesa");
+const masa_piesa = document.getElementById("masa_piesa");
+const moment_piesa = document.getElementById("moment_piesa");
 // Imagine + toggle
-piesa_imagine = document.getElementById("img-figura");
-piesa_select = document.getElementById("toggle-id");
+const piesa_imagine = document.getElementById("img-figura");
+const piesa_select = document.getElementById("toggle-id");
 
 
 
 // Valori de intrare si constante
-PI = Math.PI;
-e_3 = Math.pow(10, -3);
+const PI = Math.PI;
+const e_3 = Math.pow(10, -3);
 let phiM_num;
 let phiO_num;
 let phi1_num;
@@ -162,7 +161,7 @@ function calculAnsamblu() {
   let result = arbore.map(function(item, index) {
     return item + aliaj[index];
   });
-  // console.log(result);
+
   return result;
 }
 
@@ -281,7 +280,7 @@ function updateValues() {
     masa_piesa.innerHTML = result[1].toExponential(8);
     moment_piesa.innerHTML = result[2].toExponential(8);
   }
-  else if (piesa_text.innerHTML === "Arbore de Otel") {
+  else if (piesa_text.innerHTML === "Arbore") {
     let result = calculArbore();
     volum_piesa.innerHTML = result[0].toExponential(8);
     masa_piesa.innerHTML = result[1].toExponential(8);
@@ -303,12 +302,12 @@ piesa_select.addEventListener("change", (event) => {
     updateValues();
   }
   else if (event.target.value === "arbore") {
-    piesa_text.innerHTML = "Arbore de Otel";
+    piesa_text.innerHTML = "Arbore";
     piesa_imagine.src = "./img/arbore.jpeg";
     updateValues();
   }
   else {
-    piesa_text.innerHTML = "Aliaj de Aluminiu";
+    piesa_text.innerHTML = "Disc";
     piesa_imagine.src = "./img/aliaj_aluminiu.jpeg";
     updateValues();
   }
